@@ -19,6 +19,13 @@ body {
 
 .show {
     display:inline-flex;
+    flex-wrap:wrap;
+    
+flex-direction:row;
+flex-wrap:wrap;
+justify-content:center;
+align-content:flex-start;
+text-align: center;
 }
 
 #navbar{grid-area:menu;
@@ -77,19 +84,20 @@ grid-row:2/4;
 }
 
 div.side-gallery{grid-area:sidegal;
-display:inline-flex;
+
+background-color:rgb(24, 24, 26);
+border:2px rgb(0, 0, 0) solid ;
+height:100%; 
+width:auto;
+overflow:auto;
+padding:10px;
+
+display:flex;
 flex-direction:row;
 flex-wrap:wrap;
 justify-content:center;
 align-content:flex-start;
 text-align: center;
-
-background-color:rgb(24, 24, 26);
-border:2px rgb(0, 0, 0) solid ;
-height:auto; 
-width:auto;
-overflow:auto;
-padding:10px;
 
 grid-column:2/5;
 grid-row:3/4;
@@ -98,7 +106,10 @@ grid-row:3/4;
 
 div.content{
     margin: 4px;
+    
+
 }
+
 div.content > img{
     max-width: 200px; max-height: 100px;
     width:100%;
@@ -137,3 +148,4 @@ div.content > img{
 
     background-color:black;
 }
+
