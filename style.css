@@ -1,6 +1,9 @@
+*{
+    box-sizing:border-box;
+}
 body {
     background-color:rgb(238, 238, 235);
-    box-sizing:border-box;
+    margin:0;
 }
 
 #site-title a{
@@ -11,6 +14,28 @@ body {
     &:active{
         color:rgb(24, 24, 26)
 }}
+}
+.tooltip{
+    position:relative;
+}
+.tooltip-text{
+    position:absolute;
+    visibility:hidden;
+    top:0%;
+    right: 25%;
+    font-size:small;
+    z-index:1;
+
+    color:blanchedalmond;
+    background-color: rgba(35, 20, 255, 0.6);
+    border-radius: 5% 30% 20% 30%;
+    text-align:center;
+    opacity:0;
+    transition: opacity 0.2s;
+}
+.tooltip:hover .tooltip-text{
+    visibility: visible;
+    opacity:1;
 }
 
 .gallery-cat{
@@ -30,7 +55,7 @@ text-align: center;
 
 #navbar{grid-area:menu;
 
-background-color:blue;
+background-color:rgb(#f7f4f4);
 grid-column:3/6;
 grid-row:1/3;
 
@@ -38,35 +63,30 @@ grid-row:1/3;
 
 
 #navbar-list {
-    list-style-type:none;
-    margin: 0 10px 0 10px;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
-    height: 115px;
-    width:auto;
-
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
 
 }
 
-
 #navbar-list button{
     text-decoration: none;
+    text-align: start;
     border: 1px solid green;
     font-size:large;
-    writing-mode: vertical-rl;
-    text-orientation:sideways-right;
+    writing-mode: vertical-lr;
+
+    height:80%;
+    width:20%;
 
     color:wheat;
     background-color: blue;
 
     transition: background ease-in 0.4s;
-
-    max-height: auto;
-    width: 25%;
-
-    flex-wrap:wrap;
-
-
 }
 
 #navbar-list button:hover, button:focus {
@@ -144,7 +164,6 @@ div.content > img:active{
     opacity: 0.7;
 }
 
-
 #big-window{
     border: 2px greenyellow solid;
     margin: 20px 50px;
@@ -164,6 +183,106 @@ div.content > img:active{
     grid-row: 1/2;
     background-color: brown;
 }
+#top-nav nav > p{
+    font-family:Arial, Helvetica, sans-serif;
+    color: #f7f4f4;
+    text-shadow: black 1px 1px 0, blue -1px 0 0;
+    font-size:large;
+    padding: 0 8px;}
+
+.top-navleftp{
+        position:relative; 
+        float:left";
+    }
+
+.arrow-85deg-left{
+    position:absolute;
+    z-index:1;
+    top:20px;
+    left:-10px;
+    border: solid rgb(0, 0, 0);
+    border-width: 0 15px 15px 0;
+    padding: 15px;
+    box-shadow:  blue 4px 4px 2px 0px;
+    transform:rotate(85deg);
+    transition: all 0.1s ease-out;
+}
+
+.top-navleftp:hover .arrow-85deg-left{
+        top:35px;
+        left:-20px;
+        box-shadow: blue 5px 5px 4px 0;
+        border-width: 0 17px 17px 0;
+        transform: rotate(80deg);
+    }
+
+.top-navrightp{
+    position:relative;
+    float:right;
+}
+.arrow-85deg-right{
+    position:absolute;
+    z-index:1;
+    top:-10px;
+    right:-60px;
+    border: solid rgb(0, 0, 0);
+    border-width: 0 15px 15px 0;
+    padding: 15px;
+    box-shadow:  blue 4px 4px 2px 0px;
+    transform:rotate(-5deg);
+    
+    transition: all 0.1s ease-out;
+}
+.top-navrightp:hover .arrow-85deg-right {
+        top:10px;
+        right:-80px;
+        box-shadow: blue 5px 5px 4px 0;
+        border-width: 0 17px 17px 0;
+        transform: rotate(5deg);
+    }
+
+#right-nav{
+    grid-column:10/11;
+    grid-row:2/4;
+    margin: 10% 0 30% 0;
+    padding: 12% 3% 6% 30%;
+    background-color: black;
+}
+
+#right-nav{
+align-content: center;
+}
+
+#right-nav > nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: right;
+    align-content: flex-start;
+
+}
+#right-nav nav > button{
+    border:rgba(46, 45, 45, 0.507) 8px solid;
+    background-color: black;
+    color:rgb(238, 235, 231);
+    font-size: medium;
+    letter-spacing: 3px;
+    cursor:pointer;
+
+transition:ease-out;
+    width: 100%;
+    height:100px;
+    &:hover, &:focus{
+        text-shadow:1px 1px 0 rgb(52, 132, 23);
+        box-shadow: 0 0 0px 0.19px;
+    }
+    &:active{
+        border:8px inset rgba(46, 45, 45, 0.507);
+    }
+}
+
+#right-nav nav > button:not(:last-child){
+border-bottom: none;
+}
 
 
 .grid-container {
@@ -172,5 +291,5 @@ div.content > img:active{
                         50px 50px 400px;
     grid-template-rows: 100px 100px 800px 150px;
 
-    background-color:black;
+    background-color:rgb(247, 244, 244);
 }
