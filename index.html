@@ -8,14 +8,14 @@
         <body>
             <div class="grid-container">
                 <div id="navbar">
-                <h1 id="site-title"><a href="index.html">HellaMatters</a></h1>
-                <nav>
-                    <div id="navbar-list">
+                <h1 id="site-title" class="tooltip"><a href="index.html">HellaMatters</a>
+                <span class="tooltip-text">Return Home</span></h1>
+                <nav id="navbar-list">
                         <button class="btn active" onclick="filterSelection('animationCat')">Animation</button>
                         <button class="btn" onclick="filterSelection('charactersCat')">Characters</button>
                         <button class="btn" onclick="filterSelection('conceptArtCat')">Concept Art</button>
                         <button class="btn" onclick="filterSelection('storyboardCat')">Storyboard</button>
-                    </div>
+
                 </nav>
                 </div>
                 
@@ -133,9 +133,24 @@
 
                     <div id="top-nav">
                         <nav>
-                            
+                            <p class="top-navleftp" >
+                                Hi! <span class="arrow-85deg-left"></span> At the left
+                                you have my GENERAL art gallery.
+                            </p>
+                            <p class="top-navrightp" >At the right, there's MORE art, specific personal projects
+                                 and info! <span class="arrow-85deg-right"></span> </p>
                         </nav>
                     </div>
+
+                    <div id="right-nav">
+                        <p style="display:block;color:white;">------</p>
+                        <nav>
+                            <button class="nav-btn about">About me</button>
+                            <button class="nav-btn projects">Projects</button>
+                            <button class="nav-btn misc">Misc</button>
+                        </nav>
+                    </div>
+
             </div>
             <script src="portfoliojs.js">
 
