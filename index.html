@@ -6,7 +6,7 @@
         <link href="style.css" rel="stylesheet" type="text/css" media="all">
         </head>
         <body>
-            <div class="grid-container">
+            <div id="main" class="grid-container">
                 <div id="navbar">
                 <h1 id="site-title" class="tooltip"><a href="index.html">HellaMatters</a>
                 <span class="tooltip-text">Return Home</span></h1>
@@ -145,13 +145,41 @@
                     <div id="right-nav">
                         <p style="display:block;color:white;">------</p>
                         <nav>
-                            <button class="nav-btn about">About me</button>
-                            <button class="nav-btn projects">Projects</button>
-                            <button class="nav-btn misc">Misc</button>
+                            <ul class="nav-btn-container">
+
+                            <li class="nav-btn" onclick="openNavAbout()">
+                                <p class="nav-btn-link about">About me</p></li>
+                            <li class="nav-btn"><a class="nav-btn-link projects" href="project.html">
+                                Projects</a></li>
+                            <li class="nav-btn"><a class="nav-btn-link misc" href="#">Misc</a></li>
+                            </ul>
                         </nav>
+
                     </div>
 
             </div>
+            
+            <div id="sidenav-about" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNavAbout()">
+                    &times;</a>
+                    <div id="about-content">
+                    <div id="about-text">
+                        <h3> HellaMatters is a me</h3>
+                        <p style="text-align: justify;">Interested in the psychological and crazy, I love goofy things
+                            as well as dark themes.</p>
+                            <p style="text-align:justify;">
+                                <span class="custom-text1">I am versatile in areas of
+                                     work as well as styles.<br></span> 
+                                Specialised in simple but attractive concept and character design.
+                            </p>
+                        <p>Ask me to do some tests for you if you are curious but unsure how
+                            i'd fare in your project.</p>
+                    </div>
+                    <!--Here would go imgs or links if i had any-->
+                    </div>
+
+            </div>
+
             <script src="portfoliojs.js">
 
             </script>
