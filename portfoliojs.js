@@ -69,3 +69,14 @@ for (var i = 0; i < btns.length; i++){
 
   });
 }
+
+//SIDENAV & about PUSH content (notanimated)
+function openNavAbout(){
+  document.getElementById("sidenav-about").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNavAbout(){
+  document.getElementById("sidenav-about").style.width ="0";
+  document.getElementById("main").style.marginLeft = "0";
+}
