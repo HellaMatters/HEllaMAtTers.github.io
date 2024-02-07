@@ -10,11 +10,11 @@
                 <div id="navbar">
                 <h1 id="site-title" class="tooltip"><a href="index.html">HellaMatters</a>
                 <span class="tooltip-text">Return Home</span></h1>
-                <nav id="navbar-list">                        
-                        <button class="btn active" onclick="filterSelection('animationCat')">Animation</button>
-                        <button class="btn" onclick="filterSelection('charactersCat')">Characters</button>
-                        <button class="btn" onclick="filterSelection('conceptArtCat')">Concept Art</button>
-                        <button class="btn" onclick="filterSelection('storyboardCat')">Storyboard</button>
+                <nav tabindex="-1" id="navbar-list">
+                        <button tabindex="0" class="btn active" onclick="filterSelection('animationCat')">Animation</button>
+                        <button tabindex="0" class="btn" onclick="filterSelection('charactersCat')">Characters</button>
+                        <button tabindex="0" class="btn" onclick="filterSelection('conceptArtCat')">Concept Art</button>
+                        <button tabindex="0" class="btn" onclick="filterSelection('storyboardCat')">Storyboard</button>
 
                 </nav>
                 </div>
@@ -148,18 +148,34 @@
                     </div>
 
                     <div id="right-nav">
-                        <p style="display:block;color:white;">------</p>
+                        
+                        <p id="right-nav-topdeco" class="right-nav-deco">------</p>
+
                         <nav>
                             <ul class="nav-btn-container">
 
-                            <li class="nav-btn" onclick="openNavAbout()">
+                            <li tabindex="0" class="nav-btn" onclick="openNavAbout()" onfocus="openNavAbout()">
                                 <p class="nav-btn-link about">About me</p></li>
                             <li class="nav-btn"><a class="nav-btn-link projects" href="project.html">
                                 Projects</a></li>
-                            <li class="nav-btn"><a class="nav-btn-link misc" href="#">Misc</a></li>
+                            <li class="nav-btn">
+                            <div class="dropup-misc-div">
+                                <button onclick="openDropUpMisc()" onfocus="openDropupMisc()" class="nav-btn-link misc">Misc</button>
+                            
+                                
+                                <div id="dropup-misc" class="dropup-content">
+                                    <a tabindex="0" href="#">sketches</a>
+                                    <a tabindex="0" href="#">muses</a>
+                                </div>
+        
+                            </div>
+                            </li>
+
                             </ul>
+                            
                         </nav>
 
+                        <p id="right-nav-bottomdeco" class="right-nav-deco">------</p>
                     </div>
 
             </div>
@@ -182,6 +198,7 @@
                     </div>
                     <!--Here would go imgs or links if i had any-->
                     </div>
+
 
             </div>
 
