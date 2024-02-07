@@ -72,13 +72,13 @@ grid-row:1/3;
     width: 100%;
 
 }
-
+.verticaltext{
+    style="writing-mode:vertical-lr}
 #navbar-list button{
     text-decoration: none;
     text-align: start;
     border: 1px solid green;
     font-size:large;
-    writing-mode: vertical-lr;
 
     height:80%;
     width:20%;
