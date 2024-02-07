@@ -402,12 +402,14 @@ margin-left:50px;
 
 .main-content{
     grid-area:content;
+    max-height:auto;
+    max-width:100%;
 }
 div.side-gallery {
     z-index:1;
     grid-area:gallery;
     min-height: 200px;
-    max-height: 375px;
+    max-height: auto;
     min-width:70px;
     width:100px;
 
@@ -430,6 +432,9 @@ div.side-gallery {
     -moz-transform:rotate(90deg);
     -ms-writing-mode: tb-rl;
 }
+#big-window > img {
+    aspect-ratio:initial;
+}
 #site-title{
     margin:0;
 }
@@ -451,7 +456,7 @@ div.side-gallery {
 
 .grid-container{
 grid-template-columns: 50px 150px 150px 150px;
-grid-template-rows: 70px 120px 150px 225px 200px;
+grid-template-rows: 90px 120px 200px 225px 230px;
 grid-template-areas:
         "header header header header"
         "menu . . ."
