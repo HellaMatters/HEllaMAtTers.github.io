@@ -80,3 +80,23 @@ function closeNavAbout(){
   document.getElementById("sidenav-about").style.width ="0";
   document.getElementById("main").style.marginLeft = "0";
 }
+
+
+//When click, toggle class show on the id element
+function openDropUpMisc(){
+  document.getElementById("dropup-misc").classList.toggle("show-misc");
+}
+
+//Close dropdown menu if click outside it
+window.onclick = function(event){
+  if (!event.target.matches('.misc')) {
+    var dropups = document.getElementsByClassName("dropup-content");
+    var i;
+    for (i = 0; i < dropups.length;i++){
+      var openDropUp = dropups[i];
+      if (openDropUp.classList.contains('show-misc')) {
+        openDropUp.classList.remove('show-misc');
+      }
+    }
+  }
+}
