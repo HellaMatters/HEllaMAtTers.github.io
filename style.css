@@ -2,13 +2,14 @@
     box-sizing:border-box;
 }
 body {
-    background-color:rgb(238, 238, 235);
+    background-color: black;
     margin:0;
 }
 
 #site-title a{
     text-decoration: none;
-    color:black;
+    color:rgb(0, 0, 0);
+    text-shadow: white 0 0 6px;
      &:hover, &:focus{
         text-shadow: 2px 2px 8px rgb(251, 255, 35);
     &:active{
@@ -74,6 +75,8 @@ grid-row:1/3;
 }
 
 #navbar-list button{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    ;
     text-decoration: none;
     text-align: start;
     border: 1px solid green;
@@ -101,7 +104,6 @@ grid-row:1/3;
 #navbar-list button:hover, button:focus {
 
     color:rgb(61, 54, 54);
-    text-shadow: 1px 1px 0px rgb(52, 132, 23);
     cursor:pointer;
 
     background-color: rgb(251, 255, 35);
@@ -128,8 +130,9 @@ grid-row:2/4;
 
 div.side-gallery{
 
-background-color:rgb(24, 24, 26);
+background-color:rgb(0, 0, 0);
 border:2px rgb(0, 0, 0) solid ;
+box-shadow: black 0px 15px 20px 0px;
 height:100%; 
 width:auto;
 overflow:auto;
@@ -178,27 +181,27 @@ div.content > img:active{
 #big-window{
     border: 2px greenyellow solid;
     margin: 2px 5px;
+    height:100%;
     width:auto;
-    height:auto;
 
 }
 
 #big-window > img{  
     border-radius: var(--default-border-radius);
     object-fit: contain;
-    max-height: 100%;
-    max-width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 #top-nav {
     grid-column: 7/8;
     grid-row: 1/2;
-    background-color: brown;
+    background-color:rgba(105, 79, 8, 0.8);
 }
 #top-nav nav > p{
-    font-family:Arial, Helvetica, sans-serif;
-    color: #f7f4f4;
-    text-shadow: rgb(255, 81, 0) -1px 0 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    ;
+    color: #e2e2ec;
     font-size:large;
     padding: 0 8px;}
 
@@ -264,11 +267,14 @@ div.content > img:active{
     grid-column:10/11;
     grid-row:2/4;
     margin: 10% 0 30% 0;
-    padding: 12% 3% 6% 30%;
+    padding: 50% 0;
     background-color: black;
     text-align: center;
     justify-content: center;
+    box-shadow: black 15px 10px 20px 0px;
+    
 }
+
 
 .right-nav-deco{
     display: block;
@@ -296,10 +302,19 @@ text-shadow: 1px 1px 1px rgb(52, 132, 23);
     color:orange;
     cursor:pointer;
 }
-
+.about{
+    width:100%;
+    height:100%;
+}
 
 .nav-btn:hover .projects{
     color:cyan;
+}
+
+.projects{
+    display:block;
+    width:100%;
+    height:100%;
 }
 .nav-btn:hover .misc{
     color:yellow;
@@ -345,7 +360,12 @@ text-shadow: 1px 1px 1px rgb(52, 132, 23);
     text-decoration: none;
     display: block;
     &:hover{
-        background-color: rgb(20,29,40);
+        color: rgb(20,29,40);
+        background-color: rgb(251, 255, 35);
+    }
+    &:focus{
+        color: rgb(20,29,40);
+        background-color: rgb(251, 255, 35);
     }
 }
 
@@ -362,7 +382,8 @@ text-shadow: 1px 1px 1px rgb(52, 132, 23);
 }
 .nav-btn-link{
     font-size: large;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    ;
     line-height: 5.5em;
     letter-spacing:2px;
     text-decoration: none;
@@ -435,7 +456,12 @@ margin-left:50px;
                         50px 50px 250px;
     grid-template-rows: 100px 100px 800px 150px;
 
-    background-color:rgb(247, 244, 244);
+    background-color:rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(124, 0, 72, 0.6)),
+    url(https://cdn.discordapp.com/attachments/1199783754131054705/1205173254386483240/430020_ornamentosflorales-1688575359.jpg?ex=65d7680e&is=65c4f30e&hm=0c175a4c2e038b91d3206baae37ceed257e3d371f74c6079ae66b96faa05606e&
+    );
+    background-repeat:repeat;
+
 }
 
 
@@ -454,7 +480,7 @@ margin-left:50px;
     }
 .small{
     font-size:small;
-    color: rgb(219, 207, 207);
+    color: rgb(219, 215, 243);
 }
 .top-navleftp{
     display:none;
@@ -480,6 +506,7 @@ div.side-gallery {
 
     padding:0;
     border:none;
+    box-shadow: none;
 }
 #navbar{
     grid-area:menu;
@@ -517,6 +544,8 @@ div.side-gallery {
 
     padding:0;
     margin:0;
+    
+    box-shadow: none;
 }
 
 .nav-btn-container{
@@ -550,7 +579,7 @@ div.side-gallery {
     display:none;
 }
 .grid-container{
-grid-template-columns: 130px 275px 275px 250px;
+grid-template-columns: 150px 275px 275px 250px;
 grid-template-rows: 70px 120px 300px 225px 130px;
 grid-template-areas:
         "header header header header"
@@ -580,7 +609,7 @@ grid-template-areas:
         }
     .small{
         font-size:small;
-        color: rgb(219, 207, 207);
+        color: rgb(219, 215, 243);
     }
     .top-navleftp{
         display:none;
@@ -600,6 +629,7 @@ grid-template-areas:
     }
     div.side-gallery {
         z-index:1;
+        box-shadow:none;
         grid-area:gallery;
         min-height: 200px;
         max-height: auto;
@@ -625,6 +655,7 @@ grid-template-areas:
         -ms-writing-mode: tb-rl;
     }
     #big-window > img {
+        margin: 0 0 0 40px;
         aspect-ratio:initial;
         height:495px;
         width:auto;
@@ -644,11 +675,22 @@ grid-template-areas:
         padding:0;
         margin:0;
     }
+
+    .nav-btn-container{
+        padding:0;
+    
+    }
+    
     .nav-btn{
         float:none;
         max-height:35px;
+        border:8px solid rgb(24, 24, 26);
     }
-    
+
+    .nav-btn:not(:last-child){
+        border-bottom:none;
+    }
+
     .nav-btn-link{
         line-height: normal;
     }
@@ -680,7 +722,7 @@ grid-template-areas:
     }
 
     .grid-container{
-    grid-template-columns: 50px 150px 150px 150px;
+    grid-template-columns: 50px 150px 180px 150px;
     grid-template-rows: 110px 130px 270px 225px 230px;
     grid-template-areas:
             "header header header header"
