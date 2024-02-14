@@ -188,7 +188,7 @@ transition: opacity 0.2s;
     flex-wrap: wrap;
 }
 .tabcontent-imgcontainer > img{
-  max-width: calc(40% - 20px);
+  max-width: calc(20% - 20px);
     
     padding:4px;
     margin: 0 auto;
@@ -508,7 +508,7 @@ transition: opacity 0.2s;
   }
 
 .tabcontent-imgcontainer > img {
-max-width: 100%;
+  max-width: calc(50% - 20px);
 margin: 0 auto;
 }
 
