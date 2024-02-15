@@ -180,7 +180,7 @@ transition: opacity 0.2s;
 
 
 }
-.topright{
+.topright {
   z-index:1;
   position:absolute;
   top:-3vh;
@@ -193,12 +193,12 @@ transition: opacity 0.2s;
     cursor:pointer;
     font-size:10vh;
 
-    &:hover {
-        color:rgb(0, 60, 255);
 }
-    &:focus {
-      color:rgb(0, 60, 255);
+.topright:hover {
+    color:rgb(0, 60, 255);
 }
+.topright:focus {
+  color: rgb(0, 60, 255);
 }
 
 
