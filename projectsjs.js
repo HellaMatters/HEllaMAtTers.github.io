@@ -88,21 +88,21 @@ class AsyncGallery {
 
         this.createSingleElement({
             element: "prev",
-                type: "BATTON",
+                type: "BUTTON",
                 event: "click",
-                func: this.getNext
+                func: this.getPrevious
         });
 
         this.createSingleElement({
             element: "next",
-                type: "BATTON",
+                type: "BUTTON",
                 event: "click",
                 func: this.getNext
         });
 
         this.createSingleElement({
             element: "close",
-                type: "BATTON",
+                type: "BUTTON",
                 event: "click",
                 func: this.closeGallery
         });
@@ -130,7 +130,7 @@ class AsyncGallery {
             this.items.forEach((item, i) => {
                         let dot = document.createElement("LI");
                 dot.dataset.index = i;
-                let button = document.createElement("BATTON");
+                let button = document.createElement("BUTTON");
                 button.innerHTML = i;
                 button.addEventListener("click", () => {
                                 this.index = i;
