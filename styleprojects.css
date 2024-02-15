@@ -77,8 +77,8 @@ transition: opacity 0.2s;
     padding: 20px 0px;
     
     border-radius: 0% 0% 0% 20%;
-    outline: 1px outset greenyellow;
-    box-shadow: rgb(0, 0, 0) -20px -10px 0px 5px;
+
+    box-shadow: greenyellow 0 0 2pt 0pt, rgb(0, 0, 0) -20px -10px 0px 5px;
 }
 .project-section:not(:first-of-type){
     margin: 50px 0 0 0;
@@ -168,7 +168,6 @@ transition: opacity 0.2s;
 }
 
 .tab{
-  z-index: 1;
     width:100%;
     margin: 4px 0 0 0;
     padding: 0 0 0 4px;
@@ -177,24 +176,42 @@ transition: opacity 0.2s;
 .tabcontent{
     display:none;
 
+    position:relative;
+
+
 }
 .topright{
-    float:left;
+  z-index:1;
+  position:absolute;
+  top:-3vh;
+  left: 1vw;
+  transform: rotate(90deg); /* W3C */
+  -webkit-transform: rotate(90deg); /* Safari & Chrome */
+  -moz-transform: rotate(90deg); /* Firefox */
+  -ms-transform: rotate(90deg); /* Internet Explorer */
+  -o-transform: rotate(90deg); /* Opera */
     cursor:pointer;
     font-size:10vh;
-    &:hover, :focus{
+
+    &:hover {
         color:rgb(0, 60, 255);
-    }
 }
+    &:focus {
+      color:rgb(0, 60, 255);
+}
+}
+
 
 .tabcontent-imgcontainer{
     display: inline-flex;
     flex-wrap: wrap;
+  
+    margin: 7vh 0 0 0;
 }
 .tabcontent-imgcontainer > img{
   max-width: calc(20% - 20px);
     
-    padding:4px;
+    padding: 4px; 
     margin: 0 auto;
 
     transition: opacity 200ms;
@@ -212,9 +229,7 @@ transition: opacity 0.2s;
 }
 
 
-.gallery__Image{
-  z-index:1; /*to put imgs on top of the project-section outline*/
-}
+
 .gallery ul{
   display:inline;
     list-style-type:none;
@@ -248,7 +263,7 @@ transition: opacity 0.2s;
   flex-basis:30%;
   border-radius: 50%;
 
-  padding: 4px;
+  padding: 2px;
 }
 .cast-section p {
   flex-basis:70%;
@@ -558,18 +573,23 @@ margin: 0 auto;
 
 .cast-section {
   display:flex;
-  margin: 0 5px 10px 5px;
+  flex-wrap: wrap;
+  margin:0;
 }
 .cast-section img {
-  max-width: calc(60% - 20px);
-  flex-basis:30%;
+  display:block;
+  max-width: calc(80% - 20px);
+  padding: 2px; /*for focus /hover effect*/
+  margin: 0 auto 1vh auto;
   border-radius: 50%;
   
 }
 .cast-section p {
+  display:block;
+  flex-basis:90%;
   font-size: medium;
-  flex-basis:70%;
-  margin: 0 0 0 10px;
+  margin: auto;
+  padding: 0 0 0 4vw;
 }
 
 
