@@ -72,14 +72,15 @@ transition: opacity 0.2s;
 
     width:70%;
     height:auto;
-    margin:6% auto 10% auto;
+    margin:5% auto 10% auto;
 
 }
 
 .project-section{
     display:flex;
     flex-wrap:wrap;
-    padding: 20px 0px;
+    margin: 0;
+    padding: 0px;
     
     border-radius: 0% 0% 0% 20%;
 
@@ -135,7 +136,19 @@ transition: opacity 0.2s;
     text-align: justify;
     margin: auto 2vw auto 1vw;
     padding: 2vh 0 2vh 0;
+
+
 }
+.spaceletters{
+  letter-spacing: normal;
+  transition: all ease-out 200ms;
+}
+.spaceletters:hover{
+  letter-spacing:1px;
+  text-shadow: red 0 0 8px;
+  font-weight: bold;
+}
+
 
 .coverANDtext{
   display:flex;
@@ -147,27 +160,30 @@ transition: opacity 0.2s;
 .tablinks{
   background-color: rgb(0, 0, 0);
   color:rgb(214, 184, 11);
-  font-size: large;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.25rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight:bold;
   padding:10px;
   border: solid orange 2px;
   border-radius: 10% 20% 0 0;
 
-  transition:all 0.2s;
-  &:hover{
-    border:none;
-    background-color: rgb(34, 34, 33);
-    color:rgb(255, 208, 0);
-  }
-  &:focus{
-    border:none;
-    background-color: rgb(34, 34, 33);
-    color:rgb(255, 208, 0);
-  }
+  transition: all 0.2s;
+
+  cursor: pointer;
 }
+.tablinks:hover {
+  border:none;
+  background-color: rgb(34, 34, 33);
+  color:rgb(255, 208, 0);
+  }
+.tablinks:focus {
+  background-color: rgb(34, 34, 33);
+  color:rgb(255, 208, 0);
+}
+
 /* Create an active/current tablink class*/
 .tablinks.activeCat{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(17, 17, 17);
     border:none;
     color:rgb(255, 60, 0);
 }
