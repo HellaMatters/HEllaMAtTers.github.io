@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    padding: 0;
+    background-color: black;
+}
+
+.header {
+    width:100%;
+    padding: 3vh 0 4vh 0;
+    box-shadow: grey 0 0 5px 0 ;
+}
+.header h1{
+    margin:0;
+}
+
+#site-title {
+    margin: 0 0 0 3vw;
+    font-size: 1.80rem;
+
+    text-decoration: none;
+    color:white;
+    text-shadow: yellow 0 0 1px;
+    &:hover{
+        color:black;
+        text-shadow:white 0 0 2px;
+    }
+    &:active{
+        color:darkslategrey;
+    }
+    &:focus{
+        color:black;
+        text-shadow:white 0 0 2px;
+    }
+}
+
+.tooltip{
+    
+    position:relative;
+}
+.tooltip-text {
+    position:absolute;
+    top: 0;
+    left: 13%;
+    font-size:small;
+
+    z-index:1;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s;
+
+    color:white;
+    background-color: green;
+}
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+
+}
+
+
+#main-container {
+    display:flex;
+    margin: 10vh 4vw 10vh 10vw;
+
+}
+
+#left-container {
+    order:1;
+    flex-basis:30%;
+}
+
+.left-boxes:not(:first-of-type) {
+    margin: 24vh 0 0 0;
+}
+.left-boxes > h2 {
+    color:white;
+    margin: 0 0 0 -1vw;
+}
+
+#left-container p {
+    color:white;
+    text-align: justify;
+    line-height: 1.75rem;
+    font-size: 1.25rem;
+}
+#left-container #intro-p {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(184, 255, 177);
+    padding: 0 0 0 2vw;
+
+    border-left: 3px solid rgb(12, 255, 113);
+    height:20vh;
+}
+
+
+#right-container {
+    order:2;
+    flex-basis:70%;
+
+
+}
+
+.right-boxes{
+    margin: 0 0 0 2vw;
+
+    border: rgb(46, 209, 60) 2px double;
+}
+.right-boxes:not(:first-of-type) {
+    margin: 25vh 0 0 0;
+}
+
+#right-container p {
+margin: 2vh 1vw;
+color:white;
+}
