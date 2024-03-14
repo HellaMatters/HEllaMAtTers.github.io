@@ -214,6 +214,8 @@ transition: opacity 0.2s;
     cursor:pointer;
     font-size:10vh;
 
+    color:#fff;
+
 }
 .topright:hover {
     color:rgb(0, 60, 255);
